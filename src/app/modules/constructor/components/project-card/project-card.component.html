@@ -1,0 +1,18 @@
+<mat-card class="project-card">
+  <mat-card-header>
+    <mat-card-title>{{project.name}}</mat-card-title>
+    <mat-card-subtitle>{{project.initialDate}} - {{project.finalDate}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-actions>
+    <button mat-icon-button class="edit-icon" (click)="opendProjectModal('view')">
+      <mat-icon>visibility</mat-icon>
+    </button>
+    <button mat-icon-button class="edit-icon" (click)="opendProjectModal('edit')" *ngIf="!project.provider">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button class="delete-icon" (click)="changeStatus()" *ngIf="!project.provider" [matTooltip]="project.status ? 'Archivar' : 'Publicar'">
+      <mat-icon>{{project.status ? 'archive' : 'unarchive'}}</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

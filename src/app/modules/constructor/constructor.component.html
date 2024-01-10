@@ -1,0 +1,8 @@
+<div class="container">
+  <mat-grid-list cols="3" gutterSize="10px">
+    <mat-grid-tile *ngFor="let project of projects">
+      <app-project-card [project]="project"></app-project-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <app-fab-button (click)="opendProjectModal()"></app-fab-button>
+</div>

@@ -1,0 +1,25 @@
+<mat-toolbar>
+  <a href="/">
+    <img src="assets/images/cropped-logo_licify_640-134x41.png" alt="Licify">
+  </a>
+  <div *ngIf="user">
+    <a [routerLink]="dashboard" class="dash-link" matRipple>
+      <mat-icon>lists</mat-icon>
+      Proyectos
+    </a>
+  </div>
+  <span class="spacer"></span>
+  <button mat-icon-button class="person-icon" (click)="login()" *ngIf="!user">
+    <mat-icon>person</mat-icon>
+  </button>
+  <button mat-button [matMenuTriggerFor]="menu" *ngIf="user">
+    <mat-icon>manage_accounts</mat-icon>
+    {{user.username}}
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Salir
+    </button>
+  </mat-menu>
+</mat-toolbar>

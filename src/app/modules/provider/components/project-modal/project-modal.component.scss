@@ -1,0 +1,19 @@
+.project-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableItems {
+  width: 400px;
+  overflow: auto;
+  max-width: 100%;
+}
+
+table {
+  width: 500px;
+}
+
+.propousal-actions {
+  display: flex;
+  align-items: center;
+}

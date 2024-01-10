@@ -1,0 +1,37 @@
+<div class="container">
+  <mat-accordion class="projects-list">
+    <mat-expansion-panel [expanded]="panel === 0" (opened)="setPanel(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Proyectos Nuevos
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      
+      <mat-progress-bar *ngIf="loading" mode="query"></mat-progress-bar>
+      <app-projects-table [projects]="projects" *ngIf="!loading"></app-projects-table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="panel === 1" (opened)="setPanel(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Proyectos Aplicados
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-progress-bar *ngIf="loading" mode="query"></mat-progress-bar>
+      <app-projects-table [projects]="projects" *ngIf="!loading"></app-projects-table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="panel === 2" (opened)="setPanel(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Proyectos Asignados
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-progress-bar *ngIf="loading" mode="query"></mat-progress-bar>
+      <app-projects-table [projects]="projects" *ngIf="!loading"></app-projects-table>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</div>

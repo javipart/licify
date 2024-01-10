@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{data.item.item}}</h1>
+<div mat-dialog-content>
+  <p>Cuál es tu Propuesta?</p>
+  <mat-form-field>
+    <mat-label>Valor</mat-label>
+    <input type="number" matInput [(ngModel)]="data.item[data.username]">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.item[data.username]" cdkFocusInitial>Registrar</button>
+</div>

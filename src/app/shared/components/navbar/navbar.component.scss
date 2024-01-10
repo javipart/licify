@@ -1,0 +1,17 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+a {
+  display: flex;
+}
+
+.dash-link {
+  display: flex;
+  align-items: center;
+}
+.dash-link {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 20px;
+}

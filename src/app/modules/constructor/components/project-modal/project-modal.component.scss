@@ -1,0 +1,29 @@
+.project-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableItems {
+  width: 400px;
+  overflow: auto;
+  max-width: 100%;
+}
+
+table {
+  width: 500px;
+}
+
+.delete-item-icon,
+.edit-item-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-icon mat-icon,
+.edit-icon mat-icon {
+  font-size: 20px;
+}
